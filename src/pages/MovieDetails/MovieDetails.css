@@ -11,7 +11,16 @@
     color: #f7d354;
 }
 
+.movie-card {
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px #00091f;
+}
+
 .movies-details-page .movie-card {
+    text-align: center;
+}
+
+.movie-card h2 {
     text-align: center;
 }
 
