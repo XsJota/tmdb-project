@@ -17,11 +17,12 @@ const apiKey = import.meta.env.VITE_API_KEY
 const MovieDetail = () => {
   const {id} = useParams();
   const movieURl = `${moviesURL}${id}?${apiKey}`
-  const {movies} = useFetch(movieURl)
+  const {movies, loading} = useFetch(movieURl)
 
   return (
     <div className='movies-details-page'>
-      {movies && (
+      {loading && <p>Carregando...</p>}
+      {!loading && movies && (
         <>
           <MovieCard movie={movies} showLink={false}/>
           <p className='tagline'>{movies.tagline}</p>
