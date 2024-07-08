@@ -22,7 +22,7 @@ const Home = () => {
         {loading && <p>Carregando...</p>}
         {topMovies.length > 0 ? (
           topMovies.map((movie) => (
-            <MovieCard movie={movie}/>
+            <MovieCard key={movie.id} movie={movie}/>
           ))
         ) : (<p>Não há filmes para mostrar no momento!</p>)}
       </div>
