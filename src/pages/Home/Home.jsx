@@ -1,7 +1,10 @@
 // import custom hook
 import { useFetch } from "../../hooks/useFetch"
 
-// import css
+//import css
+import "../MoviesBox.css"
+
+// import components
 import MovieCard from "../../components/MovieCard/MovieCard"
 
 // import .env
@@ -14,7 +17,7 @@ const Home = () => {
 
   return (
     <div className='container'>
-      <h2>Melhores filmes:</h2>
+      <h2 className="title">Melhores filmes:</h2>
       <div className="movies-container">
         {loading && <p>Carregando...</p>}
         {topMovies.length > 0 ? (
