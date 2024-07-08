@@ -16,11 +16,17 @@ export const useFetch = (url) => {
             setLoading(true);
 
             try {
-                const res = await fetch(url);
-                const data = await res.json();
+                if (url.includes('top_rated')) {
+                    const res = await fetch(url);
+                    const data = await res.json();
                 
-                console.log(data.results);
-                setMovies(data.results)
+                    setMovies(data.results)
+                }else{
+                    const res = await fetch(url);
+                    const data = await res.json();
+                    
+                    setMovies(data)
+                }
 
                 setLoading(false);
             } catch (error) {
