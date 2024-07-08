@@ -20,11 +20,14 @@ const Home = () => {
       <h2 className="title">Melhores filmes:</h2>
       <div className="movies-container">
         {loading && <p>Carregando...</p>}
-        {!loading && topMovies.length > 0 ? (
+        {!loading && topMovies.length > 0 && (
           topMovies.map((movie) => (
             <MovieCard key={movie.id} movie={movie}/>
           ))
-        ) : (<p>Não há filmes para mostrar no momento!</p>)}
+        )}
+        {!loading && topMovies.length === 0 && (
+          <p>Não há filmes para mostrar no momento!</p>
+        )}
       </div>
     </div>
   )
