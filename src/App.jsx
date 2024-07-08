@@ -9,7 +9,7 @@ import Navbar from './components/Navbar/Navbar'
 
 // import pages
 import Home from './pages/Home/Home'
-import MovieDetail from './pages/MovieDetail/MovieDetail'
+import MovieDetails from './pages/MovieDetails/MovieDetails'
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
     <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/movies/:id' element={<MovieDetail />} />
+        <Route path='/movies/:id' element={<MovieDetails />} />
       </Routes>
     </BrowserRouter>
   )
