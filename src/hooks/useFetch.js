@@ -16,7 +16,7 @@ export const useFetch = (url) => {
             setLoading(true);
 
             try {
-                if (url.includes('top_rated')) {
+                if (url.includes('top_rated') || url.includes('query')) {
                     const res = await fetch(url);
                     const data = await res.json();
                 
