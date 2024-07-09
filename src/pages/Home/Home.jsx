@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <div className='container'>
-      <h2 className="title">Melhores filmes:</h2>
+      <h2 className="title">Filmes destaques:</h2>
       <div className="movies-container">
         {loading && <p>Carregando...</p>}
         {!loading && topMovies.length > 0 && (
